@@ -133,7 +133,7 @@ body {
 .nav-li {
   list-style: none;
   padding-left: 0;
-  margin: 12px;
+  margin: 18px;
   
 }
 
@@ -155,5 +155,13 @@ body {
   color: white;
   text-align: center;
 }
+
+.logout {
+  background-color: #33443C;
+  color: white;
+  height: 100vh;
+  width: 100vw;;
+}
+
 
 }
