@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-// import Nav from '../Nav/Nav';
-// import NavLink from '../Nav/NavLink';
-
+import logosmall from "../../images/logosmall.png";
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -18,9 +17,8 @@ const Header = () => {
         <nav className={`nav ${isNavOpen ? 'open' : ''}`}>
           <ul className='nav-ul'>
             <li className='nav-li'><a className="nav-link" href="/Home">Home</a></li>
-            <li className='nav-li'><a className="nav-link"href="/Registration">Registration</a></li>
-            <li className='nav-li'><a className="nav-link"href="/YourOpinions">Your opinions</a></li>
-
+            <li className='nav-li'><a className="nav-link" href="/Registration">Registration</a></li>
+            <li className='nav-li'><Link className="nav-link" to="/YourOpinions">Your opinions</Link></li>
             <div className=' li-last'>
             <li className='nav-li'><a className="nav-link" href="/LogOut">Log Out</a></li>
             <li className='nav-li'><a className="nav-link" href="https://www.support-online.pl/">Support</a></li>
@@ -32,6 +30,7 @@ const Header = () => {
         <button className="toggle-button" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faBars} className='icon-bar'/>
         </button>
+        <img className='logosmall'src={logosmall} alt={"toilet"}/>
       </header>
     );
   };
