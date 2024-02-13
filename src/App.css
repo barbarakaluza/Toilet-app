@@ -137,6 +137,12 @@ body {
   
 }
 
+.li-last {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
 
 .nav-link {
   text-decoration: none;
@@ -146,9 +152,14 @@ body {
   font-size: 32px;
 }
 
+.toggle-button {
+  background-color: transparent;
+  border: 0;
+}
+
 .footer {
   position: absolute;
-  bottom: 10;
+  bottom: 10%;
   left: 0;
   width: 100%;
   height: 60px; /* Ustaw wysokość stopki */
@@ -163,5 +174,15 @@ body {
   width: 100vw;;
 }
 
+
+.logout-text {
+  margin-top: 30%;
+  font-family: League Spartan;
+  font-size: 24px;
+}
+
+.opinion-form {
+  color: white;
+}
 
 }

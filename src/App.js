@@ -6,7 +6,7 @@ import Home from './pages/Home';
 // import Header from './components/Header/Header';
 import LogOut from './pages/LogOut';
 import Registration from './pages/Registration';
-import YourOpinion from './pages/YourOpinions';
+import YourOpinions from './pages/YourOpinions';
 
 
 function App() {
@@ -15,9 +15,10 @@ function App() {
       <Router>
       <Routes>
         <Route path="/home" element={<Home/>} />
+        <Route path="/registration" element={<Registration/>} />
+        <Route path="/youropinion" element={<YourOpinions/>} />
         <Route path="/logout" element={<LogOut/>} />
-        <Route path="/register" element={<Registration/>} />
-        <Route path="/youropinion" element={<YourOpinion/>} />
+        <Route path="https://www.support-online.pl/" element={<LogOut/>}/>
       </Routes>
     </Router>
     </div>
