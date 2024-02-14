@@ -16,7 +16,7 @@ const Header = () => {
       <header className="header">
         <nav className={`nav ${isNavOpen ? 'open' : ''}`}>
           <ul className='nav-ul'>
-            <li className='nav-li'><a className="nav-link" href="/Home">Home</a></li>
+            <li className='nav-li'><a className="nav-link" href="/">Home</a></li>
             <li className='nav-li'><a className="nav-link" href="/Registration">Registration</a></li>
             <li className='nav-li'><Link className="nav-link" to="/YourOpinions">Your opinions</Link></li>
             <div className=' li-last'>
