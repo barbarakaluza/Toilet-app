@@ -231,6 +231,7 @@ input, textarea {
 .label-reg {
   display: block;
   width: 60%;
+  text-align: 'center'
 }
 
 .input-reg {
@@ -241,5 +242,11 @@ input, textarea {
   margin: 15px;
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.container-reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 }

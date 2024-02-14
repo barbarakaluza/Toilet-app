@@ -11,6 +11,8 @@ function RegistrationForm() {
     confirmPassword: ''
   });
 
+  const [passwordMatch, setPasswordMatch] = useState(true);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -21,69 +23,88 @@ function RegistrationForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Tutaj możesz dodać logikę obsługi danych z formularza,
-    // np. walidację i wysłanie ich do serwera
-    console.log(formData);
+    // Sprawdzanie, czy hasło i potwierdzenie hasła są takie same
+    if (formData.password === formData.confirmPassword) {
+      setPasswordMatch(true);
+      // Tutaj możesz dodać logikę obsługi danych z formularza,
+      // np. walidację i wysłanie ich do serwera
+      console.log(formData);
+    } else {
+      setPasswordMatch(false);
+    }
   };
 
   return (
     <div>
-      <h2 className='title-reg' >Registration</h2>
+      <h2 className='title-reg'>Registration</h2>
       <form className='registration-form' onSubmit={handleSubmit}>
-        <label className='label-reg'>
-          Imię:
-          <input class='input-reg'
+        <div className='container-reg'>
+          <label className='label-reg'>
+            Name:
+          </label>
+          <input className='input-reg'
             type="text"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
             required
           />
-        </label>
-        <label className='label-reg'>
-          Nazwisko:
-          <input class='input-reg'
+        </div>
+        <div className='container-reg'>
+          <label className='label-reg'>
+            Surname:
+          </label>
+          <input className='input-reg'
             type="text"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
             required
           />
-        </label>
-        <label className='label-reg'>
-          Login:
-          <input class='input-reg'
+        </div>
+        <div className='container-reg'>
+          <label className='label-reg'>
+            Username:
+          </label>
+          <input className='input-reg'
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
             required
           />
-        </label>
-        <label className='label-reg'>
-          Hasło:
-          <input class='input-reg'
+        </div>
+        <div className='container-reg'>
+          <label className='label-reg'>
+            Password:
+          </label>
+          <input className='input-reg'
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
             required
           />
-        </label>
-        <label className='label-reg'>
-          Potwierdź Hasło:
-          <input class='input-reg'
+        </div>
+        <div className='container-reg'>
+          <label className='label-reg'>
+            Confirm password:
+          </label>
+          <input className='input-reg'
             type="password"
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
             required
           />
-        </label>
+          </div>
+        {!passwordMatch && <p>Hasła nie pasują do siebie.</p>}
         <RegistrationButton />
       </form>
     </div>
+    
   );
 }
+
 
 export default RegistrationForm;
