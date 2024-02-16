@@ -231,7 +231,6 @@ input, textarea {
 .label-reg {
   display: block;
   width: 60%;
-  text-align: 'center'
 }
 
 .input-reg {
@@ -248,5 +247,16 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  height: 80vh; /* Ustawienie wysokości kontenera na całą wysokość ekranu */
+}
+
+.map {
+  width: 100%;
 }
 }

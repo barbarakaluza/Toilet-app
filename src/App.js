@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import LogOut from './pages/LogOut';
 import Registration from './pages/Registration';
 import YourOpinions from './pages/YourOpinions';
+import FoundToilet from './pages/FoundToilet';
 
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
     <div className='App'>
       <Router>
       <Routes>
-        <Route path="/home" element={<Home/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/registration" element={<Registration/>} />
+        <Route path="/foundtoilet" element={<FoundToilet/>} />
         <Route path="/youropinions" element={<YourOpinions/>} />
         <Route path="/logout" element={<LogOut/>} />
         <Route path="https://www.support-online.pl/" element={<LogOut/>}/>
